@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Latihan 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app" >
+        <counter></counter>
+        <counter></counter>
+        <counter></counter>
+    </div>
+
+    <script>
+        Vue.component('counter', {
+            data: function () {
+                return{
+                    count : 0
+                }
+            },
+            template: '<button @click="count+=2">{{count}}</button>'
+        });
+
+        var app = new Vue({
+            el : '#app'
+        })
+    </script>
+</body>
+</html>
